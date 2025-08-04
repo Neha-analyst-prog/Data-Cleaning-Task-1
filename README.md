@@ -47,4 +47,4 @@ A clean, structured dataset ready for further data analysis or visualization. Th
 ## 👩‍💻 Author
 **Neha J**  
 M.Sc. Statistics (2023–25), University of Calicut  
-[GitHub Profile](https://github.com/Neha-analyst-prog) *(Add your GitHub link here)*
+[GitHub Profile](https://github.com/Neha-analyst-prog)

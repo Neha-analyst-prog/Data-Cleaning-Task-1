@@ -1,0 +1,10 @@
+Customer ID,Name,Gender,Country,DOB,Age,Email
+101,Anna,F,USA,01/02/1995,28,anna@email.com
+102,Ben,Male,United States,1994-03-01,29,ben@email.com
+103,Charlie,M,U.S.,03-05-1990,33,charlie@email.com
+104,David,MALE,India,04/10/1991,32,david@email.com
+105,Eva,female,india,1993-11-25,30,eva@email.com
+106,Fiona,FEMALE,IN,05-12-1992,,fiona@email.com
+107,George,,,,31,
+108,,M,USA,1992/07/15,31,george@email.com
+108,George,MALE,U.S.,04/10/1991,32,david@email.com

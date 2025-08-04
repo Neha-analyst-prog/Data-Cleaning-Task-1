@@ -1,0 +1,39 @@
+import pandas as pd
+import numpy as np
+
+# Load the raw dataset
+df = pd.read_csv("raw_customer_data.csv")
+
+# Step 1: Remove duplicate rows
+df = df.drop_duplicates()
+
+# Step 2: Rename columns to lowercase with underscores
+df.columns = df.columns.str.lower().str.replace(' ', '_')
+
+# Step 3: Handle missing values
+df['name'] = df['name'].fillna("Unknown")
+df['gender'] = df['gender'].fillna("Unknown")
+df['country'] = df['country'].fillna("Unknown")
+df['dob'] = df['dob'].fillna("01-01-1990")
+df['age'] = df['age'].fillna(df['age'].mode()[0])
+df['email'] = df['email'].fillna("not_provided@email.com")
+
+# Step 4: Standardize gender values
+df['gender'] = df['gender'].str.strip().str.lower().replace({
+    'f': 'female', 'm': 'male', 'female': 'female', 'male': 'male', 'unknown': 'unknown'
+})
+
+# Step 5: Standardize country values
+df['country'] = df['country'].str.strip().str.lower().replace({
+    'usa': 'united states', 'u.s.': 'united states', 'in': 'india', 'unknown': 'unknown'
+})
+
+# Step 6: Convert DOB to datetime
+df['dob'] = pd.to_datetime(df['dob'], errors='coerce', dayfirst=True)
+
+# Step 7: Convert age and customer_id to int
+df['age'] = df['age'].astype(int)
+df['customer_id'] = df['customer_id'].astype(int)
+
+# Save the cleaned file
+df.to_csv("cleaned_customer_data.csv", index=False)

@@ -1,4 +1,4 @@
-# 🧹 Data Cleaning and Preprocessing - Task 1
+# 🧹 Data Cleaning and Preprocessing
 
 ## 📁 Dataset Description
 This project simulates a real-world dataset with common issues such as:
